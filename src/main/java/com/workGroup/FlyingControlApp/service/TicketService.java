@@ -1,5 +1,5 @@
 package com.workGroup.FlyingControlApp.service;
 
-public interface FlyControlService {
+public interface TicketService {
     public boolean checkAvailableTicket(long ticketId);
 }

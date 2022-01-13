@@ -1,16 +1,16 @@
 package com.workGroup.FlyingControlApp.service.impl;
 
+import com.workGroup.FlyingControlApp.dao.Dao;
 import com.workGroup.FlyingControlApp.dao.impl.FakeDaoImpl;
 import com.workGroup.FlyingControlApp.model.Ticket;
-import com.workGroup.FlyingControlApp.service.FlyControlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TicketService implements FlyControlService {
-    private FakeDaoImpl fakeDao;
+public class TicketServiceImpl implements com.workGroup.FlyingControlApp.service.TicketService {
+    private Dao fakeDao;
 
-    public TicketService(@Autowired FakeDaoImpl fakeDao) {
+    public TicketServiceImpl(@Autowired FakeDaoImpl fakeDao) {
         this.fakeDao = fakeDao;
     }
 

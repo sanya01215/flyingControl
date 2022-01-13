@@ -10,6 +10,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.anyLong;
 
@@ -24,11 +25,13 @@ public class TicketServiceTest {
     public void isTicketAvailableSuccess() {
         long testTicketId = 1111111111;
         Ticket testTicket = new Ticket(testTicketId);
-        testTicket.setAvailable(false);
-
         when(fakeDao.getTicketById(anyLong())).thenReturn(testTicket);
 
-        boolean isRetrievedTicketAvailable = ticketService.checkAvailableTicket(testTicketId);
-        assertThat(!isRetrievedTicketAvailable);
+        testTicket.setAvailable(false);
+        assertFalse(ticketService.checkAvailableTicket(testTicketId));
+
+        testTicket.setAvailable(true);
+        assertTrue(ticketService.checkAvailableTicket(testTicketId));
+
     }
 }

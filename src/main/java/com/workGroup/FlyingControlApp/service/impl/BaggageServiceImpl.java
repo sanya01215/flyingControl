@@ -7,9 +7,10 @@ import com.workGroup.FlyingControlApp.service.BaggageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class BaggageServiceImpl implements BaggageService {
-    private FakeDaoImpl fakeDao;
+    private final Dao fakeDao;
 
     public BaggageServiceImpl(@Autowired FakeDaoImpl fakeDao) {
         this.fakeDao = fakeDao;

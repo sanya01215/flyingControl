@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/flycontrolapp/api/v1/ticket")
 public class TicketController {
-    private TicketServiceImpl ticketServiceImpl;
+    private final TicketServiceImpl ticketServiceImpl;
 
     public TicketController(@Autowired TicketServiceImpl ticketServiceImpl) {
         this.ticketServiceImpl = ticketServiceImpl;

@@ -1,9 +1,12 @@
 package com.workGroup.FlyingControlApp.dao;
 
 import com.workGroup.FlyingControlApp.model.Baggage;
+import com.workGroup.FlyingControlApp.model.Coupon;
 import com.workGroup.FlyingControlApp.model.Ticket;
 
 public interface Dao {
-    public Ticket getTicketById(long ticketId);
-    public Baggage getBaggageById(long baggageId);
+     Ticket getTicketById(long ticketId);
+     Baggage getBaggageById(long baggageId);
+     Coupon getCouponById(long couponId);
+
 }

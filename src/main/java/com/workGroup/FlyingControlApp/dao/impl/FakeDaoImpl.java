@@ -2,6 +2,7 @@ package com.workGroup.FlyingControlApp.dao.impl;
 
 import com.workGroup.FlyingControlApp.dao.Dao;
 import com.workGroup.FlyingControlApp.model.Baggage;
+import com.workGroup.FlyingControlApp.model.Coupon;
 import com.workGroup.FlyingControlApp.model.Destination;
 import com.workGroup.FlyingControlApp.model.Ticket;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,7 @@ import java.util.Map;
 
 @Component
 public class FakeDaoImpl implements Dao {
-    private Map<Long, Ticket> ticketMap = new HashMap<>();
+    private final Map<Long, Ticket> ticketMap = new HashMap<>();
 
     {
         ticketMap.put(1111111111L, new Ticket(1111111111L));
@@ -22,7 +23,7 @@ public class FakeDaoImpl implements Dao {
         ticketMap.put(6666666666L, new Ticket(6666666666L));
     }
 
-    private Map<Long, Baggage> baggageMap = new HashMap<>();
+    private final Map<Long, Baggage> baggageMap = new HashMap<>();
 
     {
         baggageMap.put(7777777777L, new Baggage(7777777777L,new Destination(7777777777L)));
@@ -31,6 +32,15 @@ public class FakeDaoImpl implements Dao {
         baggageMap.put(1000000000L, new Baggage(1000000000L,new Destination(1000000000L)));
         baggageMap.put(1100000000L, new Baggage(1100000000L,new Destination(1100000000L)));
         baggageMap.put(1110000000L, new Baggage(1110000000L,new Destination(1110000000L)));
+    }
+
+    private final Map<Long, Coupon> couponMap = new HashMap<>();
+
+    {
+        couponMap.put(0000000001L,new Coupon(0000000001L));
+        couponMap.put(0000000002L,new Coupon(0000000002L));
+        couponMap.put(0000000003L,new Coupon(0000000003L));
+        couponMap.put(0000000004L,new Coupon(0000000004L));
     }
 
     @Override
@@ -42,4 +52,7 @@ public class FakeDaoImpl implements Dao {
     public Baggage getBaggageById(long baggageId) {
         return baggageMap.get(baggageId);
     }
+
+    @Override
+    public Coupon getCouponById(long couponId) {return couponMap.get(couponId);}
 }

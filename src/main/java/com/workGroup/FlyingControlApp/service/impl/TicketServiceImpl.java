@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TicketServiceImpl implements com.workGroup.FlyingControlApp.service.TicketService {
-    private Dao fakeDao;
+    private final Dao fakeDao;
 
     public TicketServiceImpl(@Autowired FakeDaoImpl fakeDao) {
         this.fakeDao = fakeDao;

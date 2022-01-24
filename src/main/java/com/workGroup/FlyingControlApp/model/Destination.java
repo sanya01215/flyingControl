@@ -1,17 +1,19 @@
 package com.workGroup.FlyingControlApp.model;
 
-public class Destination {
-    private long destinationId;
+public class Destination implements BaseFlyingEntity{
+    private long id;
 
-    public Destination(long destinationId) {
-        this.destinationId = destinationId;
+    public Destination(long id) {
+        this.id = id;
     }
 
-    public long getDestinationId() {
-        return destinationId;
+
+    public long getId() {
+        return id;
     }
 
-    public void setDestinationId(long destinationId) {
-        this.destinationId = destinationId;
+    public void setId(long id) {
+        this.id = id;
     }
+
 }

@@ -8,5 +8,6 @@ public interface Dao {
      Ticket getTicketById(long ticketId);
      Baggage getBaggageById(long baggageId);
      Coupon getCouponById(long couponId);
+     int getSize();
 
 }

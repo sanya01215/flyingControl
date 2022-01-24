@@ -1,20 +1,20 @@
 package com.workGroup.FlyingControlApp.model;
 
-public class Baggage {
-    private long baggageId;
+public class Baggage implements BaseFlyingEntity {
+    private long id;
     private Destination baggageDestination;
 
-    public Baggage(long baggageId, Destination baggageDestination) {
-        this.baggageId = baggageId;
+    public Baggage(long id, Destination baggageDestination) {
+        this.id = id;
         this.baggageDestination = baggageDestination;
     }
 
-    public long getBaggageId() {
-        return baggageId;
+    public long getId() {
+        return id;
     }
 
-    public void setBaggageId(long baggageId) {
-        this.baggageId = baggageId;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Destination getBaggageDestination() {

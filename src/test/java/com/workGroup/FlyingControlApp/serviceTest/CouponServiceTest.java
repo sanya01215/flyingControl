@@ -1,11 +1,8 @@
 package com.workGroup.FlyingControlApp.serviceTest;
 
-import com.workGroup.FlyingControlApp.dao.Dao;
 import com.workGroup.FlyingControlApp.dao.impl.FakeDaoImpl;
 import com.workGroup.FlyingControlApp.model.Coupon;
-import com.workGroup.FlyingControlApp.service.CouponService;
 import com.workGroup.FlyingControlApp.service.impl.CouponServiceImpl;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

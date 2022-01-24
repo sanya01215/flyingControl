@@ -55,4 +55,10 @@ public class FakeDaoImpl implements Dao {
 
     @Override
     public Coupon getCouponById(long couponId) {return couponMap.get(couponId);}
+
+    @Override
+    public int getSize() {
+        return ticketMap.size()+baggageMap.size()+couponMap.size();
+    }
+
 }
